@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+    <title>Phyllobytes | Plantillas</title>
+    <meta name="description" content="Selector de plantillas para abrir los otros proyectos compartidos." />
+    <link rel="icon" type="image/svg+xml" href="/phyllobytes-landing-page/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" crossorigin href="/phyllobytes-landing-page/assets/index-Z_523Rx0.css">
+  </head>
+  <body class="min-h-screen bg-[#0D0D0D] text-white selection:bg-[#F2CC0F] selection:text-[#0D0D0D]">
+    <header class="fixed top-0 left-0 right-0 z-40 bg-[#0D0D0D]/90 backdrop-blur-md border-b border-[#BF9004]/15 py-3">
+      <div class="container mx-auto px-6 md:px-12 flex items-center justify-between gap-4">
+        <a href="./" class="flex items-center gap-2 group" aria-label="Volver al inicio">
+          <span class="font-display font-bold text-2xl tracking-tighter text-white">Phyllobytes</span>
+          <span class="w-2 h-2 rounded-full bg-[#F2CC0F] group-hover:animate-pulse-dot"></span>
+        </a>
+        <a href="./" class="bg-[#F2CC0F] hover:bg-[#F2B90C] text-[#0D0D0D] font-display font-bold px-6 py-2.5 rounded-full transition-colors">
+          Volver al inicio
+        </a>
+      </div>
+    </header>
+
+    <main class="pt-24 pb-12">
+      <section class="py-16 bg-grid-texture">
+        <div class="container mx-auto px-6 md:px-12">
+          <div class="max-w-4xl mx-auto text-center">
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#F2CC0F]/10 border border-[#F2CC0F]/30 mb-8">
+              <span class="w-2 h-2 rounded-full bg-[#F2CC0F] animate-pulse-dot"></span>
+              <span class="text-[#F2CC0F] text-sm font-medium tracking-wide">Apartado de plantillas</span>
+            </div>
+            <h1 class="font-display font-extrabold text-4xl md:text-6xl leading-[1.05] tracking-tighter mb-6">
+              Elige una plantilla y ábrela en un clic
+            </h1>
+          </div>
+        </div>
+      </section>
+
+      <section id="plantillas" class="py-12 bg-[#141414]">
+        <div class="container mx-auto px-6 md:px-12">
+          <div class="max-w-3xl mx-auto bg-[#0D0D0D] border border-[#BF9004]/20 p-6 rounded-2xl mb-10">
+            <label for="project-select" class="text-sm text-[#a89060] block mb-3">Selector de plantilla</label>
+            <div class="flex flex-col md:flex-row gap-4">
+              <select id="project-select" class="w-full bg-black/50 border border-white/10 rounded-xl px-4 py-3 text-white"></select>
+              <button id="open-project" type="button" class="bg-[#F2CC0F] hover:bg-[#F2B90C] text-[#0D0D0D] font-display font-bold px-8 py-3 rounded-xl transition-colors">
+                Abrir proyecto
+              </button>
+            </div>
+            <p id="selector-meta" class="text-[#a89060] text-sm mt-4"></p>
+          </div>
+
+          <div id="project-grid" class="grid md:grid-cols-3 gap-6"></div>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      (function () {
+        var projects = [
+          {
+            id: "nails",
+            name: "Nails",
+            badge: "React / Node.js",
+            description: "Landing page de belleza enfocada en servicios y conversión.",
+            entry: "templates/nails/index.html",
+            path: "templates/nails/"
+          },
+          {
+            id: "vet",
+            name: "VetNova",
+            badge: "HTML / CSS / JS",
+            description: "Sitio veterinario con estructura clara para servicios y contacto.",
+            entry: "templates/vet/index.html",
+            path: "templates/vet/"
+          },
+          {
+            id: "remodelaciones",
+            name: "Remodelaciones",
+            badge: "HTML / CSS / JS",
+            description: "Plantilla comercial de remodelaciones con enfoque premium.",
+            entry: "templates/remodelaciones/index.html",
+            path: "templates/remodelaciones/"
+          }
+        ];
+
+        var select = document.getElementById("project-select");
+        var openButton = document.getElementById("open-project");
+        var meta = document.getElementById("selector-meta");
+        var grid = document.getElementById("project-grid");
+
+        function renderCards() {
+          grid.innerHTML = projects
+            .map(function (project) {
+              return [
+                '<article class="bg-[#0D0D0D] border border-white/10 p-6 rounded-2xl hover:border-[#F2CC0F]/40 transition-colors flex flex-col">',
+                '<div class="inline-flex items-center rounded-full bg-[#F2CC0F]/10 border border-[#F2CC0F]/30 px-3 py-1 text-xs text-[#F2CC0F] mb-4">' + project.badge + '</div>',
+                '<h3 class="font-display font-bold text-2xl mb-3">' + project.name + '</h3>',
+                '<p class="text-[#a89060] mb-6 text-sm leading-relaxed">' + project.description + '</p>',
+                '<div class="mt-auto">',
+                '<a class="w-full inline-block text-center bg-[#F2CC0F] hover:bg-[#F2B90C] text-[#0D0D0D] font-display font-bold px-6 py-3 rounded-xl transition-colors" href="' + project.entry + '">Abrir plantilla</a>',
+                '</div>',
+                '</article>'
+              ].join("");
+            })
+            .join("");
+        }
+
+        function updateMeta() {
+          var selectedId = select.value;
+          var project = projects.find(function (item) { return item.id === selectedId; }) || projects[0];
+          openButton.dataset.target = project.entry;
+          meta.textContent = project.name + " | " + project.badge + " | Ruta: " + project.path;
+        }
+
+        select.innerHTML = projects
+          .map(function (project) {
+            return '<option value="' + project.id + '">' + project.name + '</option>';
+          })
+          .join("");
+
+        select.addEventListener("change", updateMeta);
+        openButton.addEventListener("click", function () {
+          if (openButton.dataset.target) {
+            window.location.href = openButton.dataset.target;
+          }
+        });
+
+        renderCards();
+        updateMeta();
+      })();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,476 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VetNova | Clinica Veterinaria</title>
+  <meta name="description" content="Clinica veterinaria con urgencias 24 horas, consulta, vacunacion, peluqueria y hospitalizacion." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .phyllo-back-btn {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      z-index: 2147483647;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 14px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      color: #111827;
+      background: #fcd34d;
+      border: 1px solid rgba(17, 24, 39, 0.18);
+      box-shadow: 0 10px 24px rgba(17, 24, 39, 0.2);
+    }
+
+    .phyllo-back-btn:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 14px 28px rgba(17, 24, 39, 0.28);
+    }
+  </style>
+</head>
+<body>
+  <a class="phyllo-back-btn" href="../../" aria-label="Volver a la landing de Phyllobytes">↩ Volver a Phyllobytes</a>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="#" class="brand" aria-label="VetNova inicio">
+        <span class="brand-mark">VN</span>
+        <span class="brand-text">VetNova</span>
+      </a>
+      <nav class="main-nav" aria-label="Principal">
+        <a href="#urgencias">Urgencias</a>
+        <a href="#servicios">Servicios</a>
+        <div class="nav-dropdown" aria-label="Submenu ubicacion">
+          <button type="button" class="nav-trigger" aria-haspopup="true">Ubicacion</button>
+          <div class="nav-submenu">
+            <a href="#ubicacion">Sede principal</a>
+            <a href="#sedes">Todas las sedes</a>
+          </div>
+        </div>
+        <div class="nav-dropdown" aria-label="Submenu nosotros">
+          <button type="button" class="nav-trigger" aria-haspopup="true">Nosotros</button>
+          <div class="nav-submenu">
+            <a href="#equipo">Equipo</a>
+            <a href="#faq">Preguntas</a>
+            <a href="#porque">Por que elegirnos</a>
+            <a href="#testimonios">Testimonios</a>
+          </div>
+        </div>
+        <a href="#contacto">Contacto</a>
+      </nav>
+      <a href="#contacto" class="btn btn-sm">Agenda ahora</a>
+      <button class="menu-btn" aria-label="Abrir menu" aria-expanded="false">Menu</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-bg-shape shape-1"></div>
+      <div class="hero-bg-shape shape-2"></div>
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">Atencion veterinaria premium</p>
+          <h1>Tu mascota en manos de un equipo que responde <span>24/7</span></h1>
+          <p class="lead">Atencion integral para perros y gatos con un enfoque humano: urgencias, hospitalizacion y seguimiento permanente para cada paciente.</p>
+          <div class="hero-actions">
+            <a href="#contacto" class="btn btn-lg">Agendar cita</a>
+            <a href="#servicios" class="text-link">Ver servicios</a>
+          </div>
+          <ul class="hero-badges" aria-label="Diferenciales">
+            <li>Urgencias reales 24 horas</li>
+            <li>Equipo medico certificado</li>
+            <li>Recordatorios por WhatsApp</li>
+          </ul>
+        </div>
+        <div class="hero-side reveal delay-1">
+          <figure class="hero-media">
+            <img src="https://images.unsplash.com/photo-1628009368231-7bb7cfcb0def?auto=format&fit=crop&w=1200&q=80" alt="Veterinaria atendiendo un perro en consulta" loading="lazy" />
+          </figure>
+          <div class="hero-card">
+            <p class="card-title">Linea de urgencias</p>
+            <p class="phone">+57 320 555 0101</p>
+            <div class="card-divider"></div>
+            <p class="mini-title">Cobertura destacada</p>
+            <ul>
+              <li>Consulta inmediata</li>
+              <li>Traslado asistido</li>
+              <li>Hospitalizacion 24h</li>
+            </ul>
+            <a href="#contacto" class="btn btn-ghost">Contactar urgencias</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="impact">
+      <div class="container impact-grid">
+        <article>
+          <h3>+2.500</h3>
+          <p>familias atendidas</p>
+        </article>
+        <article>
+          <h3>4.9/5</h3>
+          <p>calificacion promedio</p>
+        </article>
+        <article>
+          <h3>15 min</h3>
+          <p>tiempo medio de respuesta</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="urgencies section" id="urgencias">
+      <div class="container">
+        <p class="eyebrow center">Urgencias 24 horas</p>
+        <h2 class="section-title center">Cuando debes acudir inmediatamente a una clinica veterinaria</h2>
+        <div class="urgent-grid">
+          <article class="urgent-card reveal">
+            <img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?auto=format&fit=crop&w=900&q=80" alt="Perro en revision veterinaria por dificultad respiratoria" loading="lazy" />
+            <h3>Dificultad para respirar</h3>
+            <p>Jadeo extremo, tos persistente o respiracion forzada requieren evaluacion urgente.</p>
+          </article>
+          <article class="urgent-card reveal delay-1">
+            <img src="https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?auto=format&fit=crop&w=900&q=80" alt="Veterinario evaluando herida en mascota" loading="lazy" />
+            <h3>Heridas graves o sangrado</h3>
+            <p>Golpes fuertes, heridas profundas o sangrado continuo deben atenderse sin esperar.</p>
+          </article>
+          <article class="urgent-card reveal delay-2">
+            <img src="https://images.unsplash.com/photo-1548767797-d8c844163c4c?auto=format&fit=crop&w=900&q=80" alt="Gato en consulta de urgencia por posible intoxicacion" loading="lazy" />
+            <h3>Posible intoxicacion</h3>
+            <p>Si ingirio sustancias toxicas, medicamentos o alimentos peligrosos, acude de inmediato.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="services section" id="servicios">
+      <div class="container">
+        <p class="eyebrow center">Servicios que mas convierten</p>
+        <h2 class="section-title center">Servicios pensados para cuidar cada etapa de su vida</h2>
+        <div class="cards">
+          <article class="service-card reveal">
+            <img class="service-thumb" src="https://images.unsplash.com/photo-1581888227599-779811939961?auto=format&fit=crop&w=800&q=80" alt="Mascota en sala de urgencias veterinarias" loading="lazy" />
+            <h3>Urgencias 24 horas</h3>
+            <p>Atencion inmediata para casos criticos con triaje y estabilizacion.</p>
+          </article>
+          <article class="service-card reveal delay-1">
+            <img class="service-thumb" src="https://images.unsplash.com/photo-1450778869180-41d0601e046e?auto=format&fit=crop&w=800&q=80" alt="Perro en consulta preventiva veterinaria" loading="lazy" />
+            <h3>Consulta preventiva</h3>
+            <p>Chequeo general, nutricion y plan de bienestar personalizado.</p>
+          </article>
+          <article class="service-card reveal delay-2">
+            <img class="service-thumb" src="https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?auto=format&fit=crop&w=800&q=80" alt="Aplicacion de vacuna a mascota" loading="lazy" />
+            <h3>Vacunacion y desparasitacion</h3>
+            <p>Esquemas actualizados por edad, raza y estilo de vida.</p>
+          </article>
+          <article class="service-card reveal">
+            <img class="service-thumb" src="https://images.unsplash.com/photo-1625321171045-1fea4ac688e9?auto=format&fit=crop&w=800&q=80" alt="Laboratorio clinico veterinario" loading="lazy" />
+            <h3>Laboratorio y diagnostico</h3>
+            <p>Pruebas rapidas y resultados para tomar decisiones clinicas seguras.</p>
+          </article>
+          <article class="service-card reveal delay-1">
+            <img class="service-thumb" src="https://images.unsplash.com/photo-1591946614720-90a587da4a36?auto=format&fit=crop&w=800&q=80" alt="Servicio de bano y peluqueria para perro" loading="lazy" />
+            <h3>Peluqueria clinica</h3>
+            <p>Banio, corte, limpieza y cuidado dermatologico supervisado.</p>
+          </article>
+          <article class="service-card reveal delay-2">
+            <img class="service-thumb" src="https://images.unsplash.com/photo-1576201836106-db1758fd1c97?auto=format&fit=crop&w=800&q=80" alt="Hospitalizacion veterinaria para recuperacion" loading="lazy" />
+            <h3>Hospitalizacion</h3>
+            <p>Monitoreo continuo en un entorno seguro para recuperacion.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="branches section" id="sedes">
+      <div class="container">
+        <p class="eyebrow center">Nuestras sedes</p>
+        <h2 class="section-title center">Cobertura estrategica para urgencias en toda la ciudad</h2>
+        <div class="branch-grid">
+          <article class="branch-card reveal">
+            <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=900&q=80" alt="Sede veterinaria en zona norte" loading="lazy" />
+            <h3>Sede Norte</h3>
+            <p>Urgencias 24/7, farmacia, laboratorio y consulta general.</p>
+          </article>
+          <article class="branch-card reveal delay-1">
+            <img src="https://images.unsplash.com/photo-1517849845537-4d257902454a?auto=format&fit=crop&w=900&q=80" alt="Sede veterinaria en zona centro" loading="lazy" />
+            <h3>Sede Centro</h3>
+            <p>Hospitalizacion, imagen diagnostica y especialidades medicas.</p>
+          </article>
+          <article class="branch-card reveal delay-2">
+            <img src="https://images.unsplash.com/photo-1560807707-8cc77767d783?auto=format&fit=crop&w=900&q=80" alt="Sede veterinaria en zona occidente" loading="lazy" />
+            <h3>Sede Occidente</h3>
+            <p>Consulta prioritaria, vacunacion y cirugias programadas.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="team section" id="equipo">
+      <div class="container">
+        <p class="eyebrow center">Nuestro equipo</p>
+        <h2 class="section-title center">Profesionales que combinan experiencia clinica y trato humano</h2>
+        <div class="team-grid">
+          <article class="team-card reveal">
+            <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=900&q=80" alt="Medica veterinaria especialista en urgencias" loading="lazy" />
+            <h3>Dra. Valentina Rojas</h3>
+            <p class="role">Medicina de urgencias</p>
+            <p>Mas de 10 anos de experiencia en manejo de pacientes criticos y trauma.</p>
+          </article>
+          <article class="team-card reveal delay-1">
+            <img src="https://images.unsplash.com/photo-1612276529731-4b21494e6d71?auto=format&fit=crop&w=900&q=80" alt="Medico veterinario especialista en cirugia" loading="lazy" />
+            <h3>Dr. Mateo Cardenas</h3>
+            <p class="role">Cirugia y hospitalizacion</p>
+            <p>Enfocado en procedimientos de alta complejidad y recuperacion postoperatoria.</p>
+          </article>
+          <article class="team-card reveal delay-2">
+            <img src="https://images.unsplash.com/photo-1651008376811-b90baee60c1f?auto=format&fit=crop&w=900&q=80" alt="Veterinaria especialista en medicina preventiva" loading="lazy" />
+            <h3>Dra. Juliana Pardo</h3>
+            <p class="role">Prevencion y bienestar</p>
+            <p>Disena planes de vacunacion, nutricion y control preventivo por etapas.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="location section" id="ubicacion">
+      <div class="container location-grid">
+        <div class="location-copy reveal">
+          <p class="eyebrow">Ubicacion principal</p>
+          <h2 class="section-title">Estamos listos para atender urgencias 24/7</h2>
+          <p>Este bloque esta pensado para que muestres facilmente la sede principal de la veterinaria y sus horarios de atencion.</p>
+          <ul class="check-list">
+            <li>Direccion: Calle 109 # 18A - 45, Bogota</li>
+            <li>Linea de urgencias: +57 320 555 0101</li>
+            <li>Horario consulta general: Lunes a Sabado 7:00 a.m. - 8:00 p.m.</li>
+          </ul>
+        </div>
+        <div class="map-card reveal delay-1">
+          <iframe
+            title="Mapa de ubicacion VetNova"
+            src="https://maps.google.com/maps?q=4.698355,-74.044294&z=16&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq section" id="faq">
+      <div class="container">
+        <p class="eyebrow center">Preguntas frecuentes</p>
+        <h2 class="section-title center">Respuestas claras para los tutores antes de su visita</h2>
+        <div class="faq-list reveal">
+          <details>
+            <summary>Que debo llevar si voy a una urgencia?</summary>
+            <p>Si es posible, lleva historia clinica previa, examenes recientes y lista de medicamentos. Si no los tienes, te atendemos igual de inmediato.</p>
+          </details>
+          <details>
+            <summary>Atienden perros y gatos durante toda la noche?</summary>
+            <p>Si. Nuestro servicio de urgencias esta disponible 24 horas para perros y gatos, con triaje y estabilizacion inicial.</p>
+          </details>
+          <details>
+            <summary>Puedo agendar vacunacion por WhatsApp?</summary>
+            <p>Claro. Puedes agendar por WhatsApp y recibir recordatorios automaticos para refuerzos y controles.</p>
+          </details>
+          <details>
+            <summary>Ofrecen planes de bienestar mensual?</summary>
+            <p>Si, contamos con planes preventivos que incluyen chequeos, vacunacion y beneficios en servicios complementarios.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="why section" id="porque">
+      <div class="container why-grid">
+        <div class="reveal">
+          <p class="eyebrow">Por que esta propuesta funciona</p>
+          <h2 class="section-title">Diseñada para transmitir confianza desde la primera visita</h2>
+          <p>Nuestro modelo de atencion combina respuesta rapida, medicina preventiva y acompanamiento continuo para las familias multiespecie.</p>
+          <ul class="check-list">
+            <li>Atencion medica y quirurgica con protocolos actualizados</li>
+            <li>Equipo interdisciplinario para casos complejos</li>
+            <li>Canales de comunicacion directa para seguimiento</li>
+          </ul>
+        </div>
+        <div class="panel reveal delay-1">
+          <h3>Planes de bienestar</h3>
+          <div class="price-row">
+            <span>Plan Basico</span>
+            <strong>$149.000</strong>
+          </div>
+          <div class="price-row">
+            <span>Plan Familiar</span>
+            <strong>$249.000</strong>
+          </div>
+          <div class="price-row">
+            <span>Plan Senior</span>
+            <strong>$329.000</strong>
+          </div>
+          <p class="small">Valores de referencia sujetos a evaluacion clinica y necesidades de cada mascota.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="testimonials section" id="testimonios">
+      <div class="container">
+        <h2 class="section-title center">Testimonios de nuestros clientes</h2>
+        <div class="quotes">
+          <blockquote class="reveal">
+            "Llegamos por una urgencia y nos atendieron en minutos. Excelente equipo medico."
+            <cite>- Laura M., tutora de Max</cite>
+          </blockquote>
+          <blockquote class="reveal delay-1">
+            "Nos explicaron todo el tratamiento con mucha claridad. Se nota el enfoque humano."
+            <cite>- Carlos R., tutor de Nala</cite>
+          </blockquote>
+          <blockquote class="reveal delay-2">
+            "La mejor clinica para gatitos en la zona. Recordatorios y seguimiento impecable."
+            <cite>- Andrea V., tutora de Misu</cite>
+          </blockquote>
+          <blockquote class="reveal">
+            "El plan preventivo nos ayudo a detectar a tiempo un problema renal. Muy recomendados."
+            <cite>- Felipe T., tutor de Bruno</cite>
+          </blockquote>
+          <blockquote class="reveal delay-1">
+            "La sede es impecable y el equipo explica cada paso del tratamiento con paciencia."
+            <cite>- Maria P., tutora de Kira</cite>
+          </blockquote>
+          <blockquote class="reveal delay-2">
+            "Agendar por WhatsApp fue facil y en urgencias nos atendieron super rapido."
+            <cite>- Diego S., tutor de Luna</cite>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta section" id="contacto">
+      <div class="container cta-box reveal">
+        <div class="contact-layout">
+          <div class="contact-copy">
+            <p class="eyebrow">Contacto inmediato</p>
+            <h2>Agenda la valoracion de tu mascota hoy</h2>
+            <p>Completa tus datos y nuestro equipo te contactara para coordinar cita, seguimiento o urgencia en el menor tiempo posible.</p>
+            <div class="contact-points">
+              <article>
+                <h3>Linea 24/7</h3>
+                <p>+57 320 555 0101</p>
+              </article>
+              <article>
+                <h3>Email clinico</h3>
+                <p>contacto@vetnova.co</p>
+              </article>
+              <article>
+                <h3>Sede principal</h3>
+                <p>Calle 109 # 18A - 45, Bogota</p>
+              </article>
+            </div>
+          </div>
+
+          <form class="lead-form" action="#" method="post">
+            <label>
+              Nombre completo
+              <input type="text" name="nombre" placeholder="Tu nombre" required />
+            </label>
+            <label>
+              WhatsApp
+              <input type="tel" name="telefono" placeholder="320 000 0000" required />
+            </label>
+            <label>
+              Correo
+              <input type="email" name="correo" placeholder="correo@ejemplo.com" required />
+            </label>
+            <label>
+              Ciudad
+              <input type="text" name="ciudad" placeholder="Bogota" required />
+            </label>
+            <label class="field-wide">
+              Mensaje
+              <textarea name="mensaje" rows="4" placeholder="Cuentanos brevemente que necesita tu mascota"></textarea>
+            </label>
+            <button type="submit" class="btn btn-lg">Enviar solicitud</button>
+            <p class="form-note">Te responderemos con orientacion inicial y disponibilidad de agenda.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-main">
+      <section class="footer-brand-col">
+        <h3>VetNova.</h3>
+        <p>Cuidamos vidas con medicina veterinaria avanzada y trato humano. Mas de 12 anos acompanando familias y sus mascotas.</p>
+        <div class="social-links" aria-label="Redes sociales">
+          <a href="#" aria-label="Instagram VetNova">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm11.5 1.5a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6z" />
+            </svg>
+          </a>
+          <a href="#" aria-label="Facebook VetNova">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M13.5 22v-8H16l.5-3h-3V9.2c0-.9.3-1.5 1.7-1.5H17V5.1c-.3 0-1.4-.1-2.7-.1-2.7 0-4.5 1.6-4.5 4.6V11H7v3h2.8v8h3.7z" />
+            </svg>
+          </a>
+          <a href="#" aria-label="TikTok VetNova">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M14 3v9.2a3.2 3.2 0 1 1-2.4-3.1V6.7a6.2 6.2 0 1 0 5.4 6.1V8.9c1 .9 2.3 1.4 3.7 1.4V7.7c-1.9 0-3.6-1.4-4-3.2H14z" />
+            </svg>
+          </a>
+          <a href="#" aria-label="YouTube VetNova">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M22 12c0 2.6-.3 4.2-.6 5-.2.8-.8 1.4-1.6 1.6-.8.3-2.8.6-7.8.6s-7-.3-7.8-.6A2.3 2.3 0 0 1 2.6 17C2.3 16.2 2 14.6 2 12s.3-4.2.6-5c.2-.8.8-1.4 1.6-1.6C5 5 7 4.7 12 4.7s7 .3 7.8.6c.8.2 1.4.8 1.6 1.6.3.8.6 2.4.6 5zM10 9.2v5.6L15.2 12 10 9.2z" />
+            </svg>
+          </a>
+        </div>
+      </section>
+
+      <section class="footer-links-col">
+        <h4>Servicios</h4>
+        <ul>
+          <li><a href="#urgencias">Urgencias 24 horas</a></li>
+          <li><a href="#servicios">Consulta preventiva</a></li>
+          <li><a href="#servicios">Vacunacion y desparasitacion</a></li>
+          <li><a href="#servicios">Laboratorio clinico</a></li>
+          <li><a href="#servicios">Hospitalizacion</a></li>
+        </ul>
+      </section>
+
+      <section class="footer-links-col">
+        <h4>Empresa</h4>
+        <ul>
+          <li><a href="#porque">Sobre nosotros</a></li>
+          <li><a href="#equipo">Nuestro equipo</a></li>
+          <li><a href="#ubicacion">Ubicacion</a></li>
+          <li><a href="#faq">Preguntas frecuentes</a></li>
+          <li><a href="#sedes">Nuestras sedes</a></li>
+          <li><a href="#testimonios">Testimonios</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </section>
+
+      <section class="footer-links-col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="#">Aviso de privacidad</a></li>
+          <li><a href="#">Terminos y condiciones</a></li>
+          <li><a href="#">Politica de datos</a></li>
+        </ul>
+      </section>
+    </div>
+    <div class="container footer-bottom">
+      <p>© 2026 VetNova Clinica Veterinaria. Todos los derechos reservados.</p>
+      <p>Disenado para el bienestar animal.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
